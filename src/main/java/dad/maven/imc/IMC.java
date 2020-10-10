@@ -15,6 +15,13 @@ import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 import javafx.util.converter.NumberStringConverter;
 
+/**
+ * Clase gestora de la práctica IMC donde se muestra una interfaz y
+ * se le pregunta al usuario por sus datos para poder determinar su
+ * índice de masa corporal.
+ * 
+ * @author César Ravelo Martínez 
+ */
 public class IMC extends Application {
 	
 	private StringProperty tfPesoProperty = new SimpleStringProperty(this, "peso");
@@ -32,6 +39,10 @@ public class IMC extends Application {
 	public final double NORMAL = 25;
 	public final double SOBREPESO = 30;
 	
+	/**
+	 * Método encargado de actualizar los labels de la aplicación
+	 * y mostrar tanto el IMC resultante como la conclusión asociada al mismo.
+	 */
 	public void actualizarIndicadorIMC() {
 		Double imc = imcValor.get();
 		
@@ -51,6 +62,13 @@ public class IMC extends Application {
 		}
 	}
 	
+	/**
+	 * Método encargado de obtener los valores de peso y altura para luego
+	 * calcular el IMC. Se esperan dichos valores en cm y kg,
+	 * luego es necesaria una reconversión para poder aplicar la fórmula:
+	 * 
+	 * IMC = peso / altura^2
+	 */
 	private void recalcularIMC() {
 		if ((pesoValor.get() == 0d) || (alturaValor.get() == 0d))
 			imcValor.set(0d);
@@ -62,6 +80,12 @@ public class IMC extends Application {
 		}
 	}
 
+	/**
+	 * Método encargado de construir los aspectos básicos de la GUI.
+	 *  
+	 * @param primaryStage
+	 * @throws Exception
+	 */
 	@Override
 	public void start(Stage primaryStage) throws Exception {
 		// Declaración de componentes básicos
@@ -126,6 +150,10 @@ public class IMC extends Application {
 
 	}
 
+	/**
+	 * Método main encargado de iniciar la aplicación.
+	 * @param args
+	 */
 	public static void main(String[] args) {
 		launch(args);
 	}
