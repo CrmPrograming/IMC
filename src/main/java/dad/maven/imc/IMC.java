@@ -16,11 +16,11 @@ import javafx.stage.Stage;
 import javafx.util.converter.NumberStringConverter;
 
 /**
- * Clase gestora de la pr·ctica IMC donde se muestra una interfaz y
+ * Clase gestora de la pr√°ctica IMC donde se muestra una interfaz y
  * se le pregunta al usuario por sus datos para poder determinar su
- * Ìndice de masa corporal.
+ * √≠ndice de masa corporal.
  * 
- * @author CÈsar Ravelo MartÌnez 
+ * @author C√©sar Ravelo Mart√≠nez 
  */
 public class IMC extends Application {
 	
@@ -40,8 +40,8 @@ public class IMC extends Application {
 	public final double SOBREPESO = 30;
 	
 	/**
-	 * MÈtodo encargado de actualizar los labels de la aplicaciÛn
-	 * y mostrar tanto el IMC resultante como la conclusiÛn asociada al mismo.
+	 * M√©todo encargado de actualizar los labels de la aplicaci√≥n
+	 * y mostrar tanto el IMC resultante como la conclusi√≥n asociada al mismo.
 	 */
 	public void actualizarIndicadorIMC() {
 		Double imc = imcValor.get();
@@ -63,9 +63,9 @@ public class IMC extends Application {
 	}
 	
 	/**
-	 * MÈtodo encargado de obtener los valores de peso y altura para luego
+	 * M√©todo encargado de obtener los valores de peso y altura para luego
 	 * calcular el IMC. Se esperan dichos valores en cm y kg,
-	 * luego es necesaria una reconversiÛn para poder aplicar la fÛrmula:
+	 * luego es necesaria una reconversi√≥n para poder aplicar la f√≥rmula:
 	 * 
 	 * IMC = peso / altura^2
 	 */
@@ -81,14 +81,14 @@ public class IMC extends Application {
 	}
 
 	/**
-	 * MÈtodo encargado de construir los aspectos b·sicos de la GUI.
+	 * M√©todo encargado de construir los aspectos b√°sicos de la GUI.
 	 *  
 	 * @param primaryStage
 	 * @throws Exception
 	 */
 	@Override
 	public void start(Stage primaryStage) throws Exception {
-		// DeclaraciÛn de componentes b·sicos
+		// Declaraci√≥n de componentes b√°sicos
 		Label lPeso = new Label("Peso:");
 		Label lAltura = new Label("Altura:");
 		Label lKg = new Label("kg");
@@ -151,7 +151,7 @@ public class IMC extends Application {
 	}
 
 	/**
-	 * MÈtodo main encargado de iniciar la aplicaciÛn.
+	 * M√©todo main encargado de iniciar la aplicaci√≥n.
 	 * @param args
 	 */
 	public static void main(String[] args) {
